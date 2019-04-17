@@ -1,0 +1,51 @@
+{
+  "name": "mpug",
+  "version": "0.1.0",
+  "description": "A scalable and durable, event ingestion and delivery system that supports the publish-subscribe pattern (pubsub) backed by MongoDB.",
+  "main": "index.js",
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "test": "nyc mocha build/test",
+    "lint": "eslint '**/*.js' && gts check",
+    "check": "gts check",
+    "clean": "gts clean",
+    "compile": "tsc -p .",
+    "fix": "gts fix",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khangtoh/mpug.git"
+  },
+  "keywords": [
+    "pubsub",
+    "mongo",
+    "event",
+    "publish",
+    "subscribe",
+    "node",
+    "nodejs",
+    "cloud",
+    "api",
+    "server-sent"
+  ],
+  "author": "Khang Toh",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/khangtoh/mpug/issues"
+  },
+  "homepage": "https://github.com/khangtoh/mpug#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "nyc": "^14.0.0",
+    "gts": "^0.9.0",
+    "typescript": "~3.1.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
+}
